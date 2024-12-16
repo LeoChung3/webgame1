@@ -11,6 +11,12 @@ import Cannonmanager from "./CannonManager.js"
 
 const ctx = canvas.getContext("2d");
 const Restartbutton  = document.getElementById("restart");
+
+const upbutton  = document.getElementById("up");
+const downbutton  = document.getElementById("down");
+const leftbutton  = document.getElementById("left");
+const rightbutton  = document.getElementById("right");
+
 const playerClass = new Player();
 const objectiveClass = new Objectives();
 const cannonmanagerClass = new Cannonmanager();
@@ -83,6 +89,43 @@ Restartbutton.addEventListener("click", () => {
     cannonmanagerClass.Restart();
     playerClass.restart();
     objectiveClass.restart()
+});
+
+
+leftbutton.addEventListener("mousedown", () => {
+    playerClass.left = true
+});
+
+leftbutton.addEventListener("mouseup", () => {
+    playerClass.left = false;
+
+});
+
+rightbutton.addEventListener("mousedown", () => {
+    playerClass.right = true
+});
+
+rightbutton.addEventListener("mouseup", () => {
+    playerClass.right = false;
+
+});
+
+upbutton.addEventListener("mousedown", () => {
+    playerClass.up = true
+});
+
+upbutton.addEventListener("mouseup", () => {
+    playerClass.up = false;
+
+});
+
+downbutton.addEventListener("mousedown", () => {
+    playerClass.down = true
+});
+
+downbutton.addEventListener("mouseup", () => {
+    playerClass.down = false;
+
 });
 
 requestAnimationFrame(frame)
