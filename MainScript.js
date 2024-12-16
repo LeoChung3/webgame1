@@ -125,7 +125,6 @@ downbutton.addEventListener("mousedown", () => {
 
 downbutton.addEventListener("mouseup", () => {
     playerClass.down = false;
-
 });
 
 requestAnimationFrame(frame)
